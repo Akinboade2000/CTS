@@ -263,7 +263,7 @@ img{
   text-align: center;
   color: white;
   overflow: hidden;
-  padding-top: 16rem;
+  padding-top: var(--header-height)
 }
 
 .home::before {
@@ -289,8 +289,9 @@ img{
 }
 
 .home__container {
-  z-index: 1;
-  position: relative;
+  height: calc(100vh - var(--header-height)); /* Adjust for header */
+  align-content: center;
+  padding-top: 2rem;
 }
 
 .home__title {
@@ -543,6 +544,7 @@ img{
   color: white;
   margin-top: var(--header-height);
   padding: 2rem 0;
+  width: 100%;
 }
 
 .contact-hero {
@@ -555,6 +557,7 @@ img{
   color: white;
   margin-top: var(--header-height);
   padding: 2rem 0;
+  width: 100%;
 }
 
 .services-hero {
@@ -567,6 +570,7 @@ img{
   color: white;
   margin-top: var(--header-height);
   padding: 2rem 0;
+  width: 100%;
 }
 
 .mgmt-hero {
@@ -579,13 +583,29 @@ img{
   color: white;
   margin-top: var(--header-height);
   padding: 2rem 0;
+  width: 100%;
+}
+
+.about-hero.bd-container,
+.contact-hero.bd-container,
+.services-hero.bd-container,
+.mgmt-hero.bd-container {
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .about-hero__content,
 .contact-hero__content,
 .services-hero__content,
 .mgmt-hero__content {
-  max-width: 800px;
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
   padding: 0 1rem;
 }
 
@@ -596,7 +616,6 @@ img{
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-1);
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* About Page Styles */
@@ -1216,8 +1235,7 @@ img{
   }
 
   .home__container{
-    height: 100vh;
-    justify-items: center;
+    padding-top: 4rem;
   }
 
   .services__container,
@@ -1247,6 +1265,15 @@ img{
     height: 50vh;
   }
   
+  .about-hero__content,
+  .contact-hero__content,
+  .services-hero__content,
+  .mgmt-hero__content {
+    width: calc(100% - 4rem);
+    margin-left: var(--mb-4);
+    margin-right: var(--mb-4);
+  }
+
   .aabout-section__stats {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1275,6 +1302,14 @@ img{
     column-gap: 7rem;
   }
   
+  .about-hero__content,
+  .contact-hero__content,
+  .services-hero__content,
+  .mgmt-hero__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .mgmt-grid {
     grid-template-columns: repeat(3, 1fr);
   }
