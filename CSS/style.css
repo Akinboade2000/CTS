@@ -405,6 +405,7 @@ img{
 
 .menu__name{
   font-size: var(--normal-font-size);
+  text-align: center;
 }
 
 .menu__detail, .menu__preci{
@@ -413,6 +414,7 @@ img{
 
 .menu__detail{
   margin-bottom: var(--mb-1);
+  text-align: center;
 }
 
 .menu__button{
@@ -618,7 +620,7 @@ img{
 
 .aabout-section__stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: var(--mb-4);
 }
